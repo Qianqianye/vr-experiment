@@ -62,15 +62,15 @@ public class Fractal : MonoBehaviour {
 		Quaternion.Euler (-90f, 0f, 0f)
 	};
 
-	public float spawnProbability;
+	//public float spawnProbability;
 
 	private IEnumerator CreateChildren() {
 		for (int i = 0; i < childDirections.Length; i++) {
-			if (Random.value < spawnProbability){
+			//if (Random.value < spawnProbability){
 			yield return new WaitForSeconds (Random.Range (0.1f,0.5f));
 			new GameObject ("Fractal Child").AddComponent<Fractal> ().
 			Initialize (this, i);
-			}
+			//}
 		}
 	}
 		
@@ -87,7 +87,7 @@ public class Fractal : MonoBehaviour {
 		transform.localScale = Vector3.one * childScale;
 		transform.localPosition = childDirections[childIndex] * (0.5f + 0.5f * childScale);
 		transform.localRotation = childOrientations[childIndex];
-		spawnProbability = parent.spawnProbability;
+		//spawnProbability = parent.spawnProbability;
 		maxRotationSpeed = parent.maxRotationSpeed;
 		maxTwist = parent.maxTwist;
 	}
