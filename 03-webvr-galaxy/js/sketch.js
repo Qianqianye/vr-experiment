@@ -12,7 +12,7 @@ var effect = new THREE.VREffect(renderer);
 effect.setSize(window.innerWidth, window.innerHeight);
 
 var loader = new THREE.TextureLoader();
-loader.load('img/galaxy.jpg', onTextureLoaded);
+loader.load('img/glow.png', onTextureLoaded);
 
 function onTextureLoaded(texture) {
 
