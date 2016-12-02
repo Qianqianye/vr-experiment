@@ -71,7 +71,7 @@ function setStageDimensions(stage) {
 
    var geometry = new THREE.SphereGeometry(50, 200, 200);
   var material = new THREE.MeshBasicMaterial({
-    map: THREE.ImageUtils.loadTexture('img/tycho_cyl_glow.png'),
+    map: THREE.ImageUtils.loadTexture('img/galaxy.jpg'),
     side: THREE.BackSide
   });
 
