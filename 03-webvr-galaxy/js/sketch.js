@@ -11,7 +11,25 @@ controls.standing = true;
 var effect = new THREE.VREffect(renderer);
 effect.setSize(window.innerWidth, window.innerHeight);
 
- setupStage();
+var loader = new THREE.TextureLoader();
+loader.load('img/galaxy.jpg', onTextureLoaded);
+
+function onTextureLoaded(texture) {
+
+ var geometry = new THREE.SphereGeometry(50, 200, 200);
+  var material = new THREE.MeshBasicMaterial({
+    map: texture,
+    side: THREE.BackSide
+  });
+
+  // Align the skybox to the floor (which is at y=0).
+  skybox = new THREE.Mesh(geometry, material);
+  skybox.position.y = 50;
+  scene.add(skybox);
+
+  setupStage();
+}
+
 
 //VR manager helper to enter and exit VR mode.
 var params = {
@@ -68,16 +86,11 @@ function setupStage() {
 }
 
 function setStageDimensions(stage) {
-
-   var geometry = new THREE.SphereGeometry(50, 200, 200);
-  var material = new THREE.MeshBasicMaterial({
-    map: THREE.ImageUtils.loadTexture('img/galaxy.jpg'),
-    side: THREE.BackSide
-  });
-
+   var material = skybox.material;
+  scene.remove(skybox);
+  var geometry = new THREE.SphereGeometry(50, 200, 200);
   skybox = new THREE.Mesh(geometry, material);
-  skybox.position.y = 50; // Align the skybox to the floor (which is at y=0).
+  skybox.position.y =50;
   scene.add(skybox);
-
   plane.position.set(0, controls.userHeight, 0);
 }
