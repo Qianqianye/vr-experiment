@@ -18,7 +18,7 @@ THREE.ShaderLib[ 'water' ] = {
 			"distortionScale":  { value: 20.0 },
 			"noiseScale":       { value: 1.0 },
 			"textureMatrix" :   { value: new THREE.Matrix4() },
-			"sunColor":         { value: new THREE.Color( 0x7F7F7F ) },
+			"sunColor":         { value: new THREE.Color( 0xd8d8d8 ) },
 			"sunDirection":     { value: new THREE.Vector3( 0.70707, 0.70707, 0 ) },
 			"eye":              { value: new THREE.Vector3() },
 			"waterColor":       { value: new THREE.Color( 0x555555 ) }

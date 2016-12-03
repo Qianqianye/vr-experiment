@@ -47,8 +47,8 @@ function getCubeMap(i) {
     cubeMap.flipY = false;
 
     var envMaps = [
+        {file: "matrix.jpg", size: 1024},
         {file: "pattern-bg.jpg", size: 1024},
-        {file: "matrix-3.jpg", size: 1024},
         {file: "space.jpg", size: 1024},
         
 
