@@ -59,7 +59,7 @@
 
                 // change bg
 
-                var cubeMap = getCubeMap(Math.floor(Math.random() * 4))
+                var cubeMap = getCubeMap(Math.floor(Math.random() * 3))
                 cubeShader.uniforms['tCube'].value = cubeMap;
                 material.envMap = cubeMap
 
@@ -78,7 +78,7 @@
                     //  c.position.y += Math.sin(time + i % 3 + 1) / 100
                     //  c.position.z += Math.sin(time + i % 3 + 2) / 100
                     TweenMax.to(c.position, 1, {
-                        delay: Math.random() * .3,
+                        delay: Math.random() * .2,
                         x: newPosition.x,
                         y: newPosition.y,
                         z: newPosition.z,
