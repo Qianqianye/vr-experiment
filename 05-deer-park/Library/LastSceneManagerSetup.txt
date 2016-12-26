@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene.unity
+- path: E:/Unity Projects/3-ink - Colin/Assets/scene.unity
   isLoaded: 1
   isActive: 1
